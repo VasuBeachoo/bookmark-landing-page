@@ -3,14 +3,30 @@ import DownloadBlock from "../DownloadBlock";
 import logoChrome from "../../assets/logo-chrome.svg";
 import logoFirefox from "../../assets/logo-firefox.svg";
 import logoOpera from "../../assets/logo-opera.svg";
+import { mixinSection } from "../../GlobalStyle";
 
-export const DownloadsOptions = styled.div``;
+export const DownloadsOptions = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
 
-export const DownloadsParagraph = styled.p``;
+export const DownloadsParagraph = styled.p`
+  text-align: center;
+`;
 
-export const DownloadsHeading = styled.h2``;
+export const DownloadsHeading = styled.h2`
+  text-align: center;
+`;
 
-export const DownloadsBox = styled.section``;
+export const DownloadsBox = styled.section`
+  ${mixinSection}
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
 const Downloads = ({ className }) => {
   const downloadOptions = [

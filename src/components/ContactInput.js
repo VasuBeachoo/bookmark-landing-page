@@ -6,13 +6,31 @@ export const ErrorIcon = styled.img``;
 
 export const ErrorMsg = styled.p``;
 
-export const ErrorMsgBox = styled.div``;
+export const ErrorMsgBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+`;
 
-export const EmailInput = styled.input.attrs({ type: "email" })``;
+export const EmailInput = styled.input.attrs({ type: "email" })`
+  width: 100%;
+`;
 
-export const EmailInputBox = styled.div``;
+export const EmailInputBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
 
-export const ContactInputBox = styled.div``;
+export const ContactInputBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
 
 const ContactInput = ({ className }) => {
   return (

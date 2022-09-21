@@ -5,16 +5,29 @@ import FeatureBlock from "../FeatureBlock";
 import imgFeature1 from "../../assets/illustration-features-tab-1.svg";
 import imgFeature2 from "../../assets/illustration-features-tab-2.svg";
 import imgFeature3 from "../../assets/illustration-features-tab-3.svg";
+import { mixinSection } from "../../GlobalStyle";
 
-export const FeaturesParagraph = styled.p``;
+export const FeaturesParagraph = styled.p`
+  text-align: center;
+`;
 
-export const FeaturesHeading = styled.h2``;
+export const FeaturesHeading = styled.h2`
+  text-align: center;
+`;
 
-export const FeaturesBox = styled.section``;
+export const FeaturesBox = styled.section`
+  ${mixinSection}
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
 const Features = ({ className }) => {
   const features = [
     {
+      id: "0",
+      tabName: "Simple Bookmarking",
       img: {
         src: imgFeature1,
         alt: "features-tab-1-illustration",
@@ -24,6 +37,8 @@ const Features = ({ className }) => {
         "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.",
     },
     {
+      id: "1",
+      tabName: "Speedy Searching",
       img: {
         src: imgFeature2,
         alt: "features-tab-2-illustration",
@@ -33,6 +48,8 @@ const Features = ({ className }) => {
         "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
     },
     {
+      id: "2",
+      tabName: "Easy Sharing",
       img: {
         src: imgFeature3,
         alt: "features-tab-3-illustration",
@@ -53,7 +70,7 @@ const Features = ({ className }) => {
         websites. Your bookmarks sync between your devices so you can access
         them on the go.
       </FeaturesParagraph>
-      <Tab />
+      <Tab options={features.map((feature) => feature.tabName)} />
       <FeatureBlock
         img={currentFeature.img}
         heading={currentFeature.heading}

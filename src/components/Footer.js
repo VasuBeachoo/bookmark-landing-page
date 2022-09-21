@@ -2,18 +2,36 @@ import styled from "styled-components";
 import logoBookmark from "../assets/logo-bookmark.svg";
 import iconFacebook from "../assets/icon-facebook.svg";
 import iconTwitter from "../assets/icon-twitter.svg";
+import { mixinSection } from "../GlobalStyle";
 
 export const FooterSocialIcon = styled.img``;
 
-export const FooterSocialIcons = styled.div``;
+export const FooterSocialIcons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+`;
 
 export const FooterLink = styled.p``;
 
-export const FooterLinks = styled.div``;
+export const FooterLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const FooterLogo = styled.img``;
 
-export const FooterBox = styled.footer``;
+export const FooterBox = styled.footer`
+  ${mixinSection}
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
 const Footer = ({ className }) => {
   const footerLinks = ["FEATURES", "PRICING", "CONTACT"];

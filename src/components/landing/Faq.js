@@ -1,14 +1,30 @@
 import styled from "styled-components";
+import { mixinSection } from "../../GlobalStyle";
 import Accordion from "../Accordion";
 import Button from "../Buttons";
 
-export const FaqItems = styled.div``;
+export const FaqItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
-export const FaqParagraph = styled.p``;
+export const FaqParagraph = styled.p`
+  text-align: center;
+`;
 
-export const FaqHeading = styled.h2``;
+export const FaqHeading = styled.h2`
+  text-align: center;
+`;
 
-export const FaqBox = styled.section``;
+export const FaqBox = styled.section`
+  ${mixinSection}
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
 const Faq = ({ className }) => {
   const faqItems = [

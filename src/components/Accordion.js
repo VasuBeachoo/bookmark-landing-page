@@ -3,15 +3,34 @@ import iconArrow from "../assets/icon-arrow.svg";
 
 export const AccordionDropdownText = styled.p``;
 
-export const AccordionDropdownBox = styled.div``;
+export const AccordionDropdownBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+`;
 
-export const AccordionHeadingIcon = styled.img``;
+export const AccordionHeadingIcon = styled.img`
+  margin-left: auto;
+`;
 
 export const AccordionHeadingText = styled.h3``;
 
-export const AccordionHeadingBox = styled.div``;
+export const AccordionHeadingBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+`;
 
-export const AccordionBox = styled.div``;
+export const AccordionBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
 
 const Accordion = ({ className, heading, dropdown }) => {
   return (
