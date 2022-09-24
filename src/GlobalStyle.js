@@ -29,12 +29,16 @@ export const mixinSection = css`
 export const mixinHeading = css`
   color: var(--Dark-blue);
   font-weight: 500;
+  letter-spacing: 0.01ch;
+  line-height: 2ch;
   margin: 0;
 `;
 
 export const mixinParagraph = css`
   color: var(--Grayish-blue);
   font-weight: 400;
+  letter-spacing: 0.01ch;
+  line-height: 2.5ch;
   margin: 0;
 `;
 

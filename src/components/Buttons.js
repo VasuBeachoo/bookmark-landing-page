@@ -5,13 +5,15 @@ const Button = styled.button`
   text-align: center;
   background-color: var(--primary-clr);
   color: var(--White);
-  font-size: 0.925rem;
+  font-size: 0.915rem;
   font-weight: 500;
   letter-spacing: 0.2ch;
-  line-height: 2ch;
+  line-height: 2.15ch;
   border: 0.2rem solid var(--primary-clr);
   border-radius: 0.35rem;
-  padding: 0.8rem 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  padding: 0.75rem 1.5rem;
   transition: 0.25s;
 
   &:hover {
