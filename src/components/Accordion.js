@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import iconArrow from "../assets/icon-arrow.svg";
-import { mixinHeading, mixinParagraph } from "../GlobalStyle";
 
-export const AccordionDropdownText = styled.p`
-  ${mixinParagraph}
-`;
+export const AccordionDropdownText = styled.p``;
 
 export const AccordionDropdownBox = styled.div`
   display: flex;
@@ -19,7 +16,6 @@ export const AccordionHeadingIcon = styled.img`
 `;
 
 export const AccordionHeadingText = styled.h3`
-  ${mixinHeading}
   font-weight: 400;
 `;
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mixinHeading, mixinParagraph } from "../GlobalStyle";
+import { mixinSectionHeading, mixinSectionParagraph } from "../GlobalStyle";
 import { SoftBlueBtn } from "./Buttons";
 
 export const DownloadDivider = styled.hr`
@@ -7,11 +7,11 @@ export const DownloadDivider = styled.hr`
 `;
 
 export const DownloadInfo = styled.p`
-  ${mixinParagraph}
+  ${mixinSectionParagraph}
 `;
 
 export const DownloadTitle = styled.h3`
-  ${mixinHeading}
+  ${mixinSectionHeading}
 `;
 
 export const DownloadIcon = styled.img``;

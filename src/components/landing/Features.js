@@ -5,16 +5,28 @@ import FeatureBlock from "../FeatureBlock";
 import imgFeature1 from "../../assets/illustration-features-tab-1.svg";
 import imgFeature2 from "../../assets/illustration-features-tab-2.svg";
 import imgFeature3 from "../../assets/illustration-features-tab-3.svg";
-import { mixinHeading, mixinParagraph, mixinSection } from "../../GlobalStyle";
+import {
+  mixinSectionHeading,
+  mixinSectionParagraph,
+  mixinSection,
+} from "../../GlobalStyle";
+
+export const FeatureSwitcherBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4.25rem;
+  width: 100%;
+  padding-top: 2rem;
+`;
 
 export const FeaturesParagraph = styled.p`
-  ${mixinParagraph}
-  text-align: center;
+  ${mixinSectionParagraph}
 `;
 
 export const FeaturesHeading = styled.h2`
-  ${mixinHeading}
-  text-align: center;
+  ${mixinSectionHeading}
 `;
 
 export const FeaturesBox = styled.section`
@@ -23,6 +35,8 @@ export const FeaturesBox = styled.section`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  gap: 1rem;
+  padding-block: 1rem 7.5rem;
 `;
 
 const Features = ({ className }) => {
@@ -72,12 +86,14 @@ const Features = ({ className }) => {
         websites. Your bookmarks sync between your devices so you can access
         them on the go.
       </FeaturesParagraph>
-      <Tab options={features.map((feature) => feature.tabName)} />
-      <FeatureBlock
-        img={currentFeature.img}
-        heading={currentFeature.heading}
-        description={currentFeature.description}
-      />
+      <FeatureSwitcherBox>
+        <Tab options={features.map((feature) => feature.tabName)} />
+        <FeatureBlock
+          img={currentFeature.img}
+          heading={currentFeature.heading}
+          description={currentFeature.description}
+        />
+      </FeatureSwitcherBox>
     </FeaturesBox>
   );
 };

@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import { SoftBlueBtn, DarkBlueBtn } from "../Buttons";
 import introImg from "../../assets/illustration-hero.svg";
-import { mixinHeading, mixinParagraph, mixinSection } from "../../GlobalStyle";
+import {
+  mixinSectionHeading,
+  mixinSectionParagraph,
+  mixinSection,
+} from "../../GlobalStyle";
 
 export const IntroImg = styled.img`
   width: 100%;
@@ -23,15 +27,14 @@ export const IntroBtns = styled.div`
 `;
 
 export const IntroParagraph = styled.p`
-  ${mixinParagraph}
-  font-size: 1.05rem;
-  max-width: 45ch;
+  ${mixinSectionParagraph}
+  text-align: left;
 `;
 
 export const IntroHeading = styled.h1`
-  ${mixinHeading}
+  ${mixinSectionHeading}
+  text-align: left;
   font-size: 2.25rem;
-  max-width: 20ch;
 `;
 
 export const IntroTextBox = styled.div`
@@ -50,6 +53,7 @@ export const IntroBox = styled.section`
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  padding-block: 1.5rem 6rem;
 `;
 
 const Intro = ({ className }) => {

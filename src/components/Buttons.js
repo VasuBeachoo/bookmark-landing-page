@@ -3,13 +3,14 @@ import styled from "styled-components";
 const Button = styled.button`
   all: unset;
   text-align: center;
+  user-select: none;
   background-color: var(--primary-clr);
   color: var(--White);
   font-size: 0.915rem;
   font-weight: 500;
   letter-spacing: 0.2ch;
   line-height: 2.15ch;
-  border: 0.2rem solid var(--primary-clr);
+  border: 0.185rem solid var(--primary-clr);
   border-radius: 0.35rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;

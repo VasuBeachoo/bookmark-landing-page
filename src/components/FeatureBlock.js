@@ -1,13 +1,15 @@
 import styled from "styled-components";
-import { mixinHeading, mixinParagraph } from "../GlobalStyle";
+import { mixinSectionHeading, mixinSectionParagraph } from "../GlobalStyle";
 import { SoftBlueBtn } from "./Buttons";
 
 export const FeatureDescription = styled.p`
-  ${mixinParagraph}
+  ${mixinSectionParagraph}
+  text-align: left;
 `;
 
 export const FeatureHeading = styled.h2`
-  ${mixinHeading}
+  ${mixinSectionHeading}
+  text-align: left;
 `;
 
 export const FeatureTextBox = styled.div`
@@ -15,9 +17,12 @@ export const FeatureTextBox = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 1.25rem;
 `;
 
-export const FeatureImg = styled.img``;
+export const FeatureImg = styled.img`
+  width: 100%;
+`;
 
 export const FeatureImgBox = styled.div`
   display: flex;
@@ -31,6 +36,7 @@ export const FeatureBlockBox = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 4rem;
 `;
 
 const FeatureBlock = ({ className, img, heading, description }) => {

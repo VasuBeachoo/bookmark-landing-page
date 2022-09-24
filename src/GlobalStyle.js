@@ -26,27 +26,40 @@ export const mixinSection = css`
   padding-inline: clamp(2rem, 7vw, 5rem);
 `;
 
-export const mixinHeading = css`
+export const mixinSectionHeading = css`
+  text-align: center;
   color: var(--Dark-blue);
+  font-size: 1.65rem;
   font-weight: 500;
   letter-spacing: 0.01ch;
   line-height: 2ch;
+  max-width: 20ch;
   margin: 0;
 `;
 
-export const mixinParagraph = css`
+export const mixinSectionParagraph = css`
+  text-align: center;
   color: var(--Grayish-blue);
+  font-size: 1.05rem;
   font-weight: 400;
   letter-spacing: 0.01ch;
-  line-height: 2.5ch;
+  line-height: 2.75ch;
+  max-width: 45ch;
   margin: 0;
 `;
 
 export const mixinLink = css`
+  user-select: none;
   color: var(--Dark-blue);
   font-weight: 400;
   opacity: 0.8;
   margin: 0;
+  transition: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--Soft-red);
+  }
 `;
 
 export default GlobalStyle;

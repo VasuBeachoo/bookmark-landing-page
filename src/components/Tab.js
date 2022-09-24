@@ -1,12 +1,40 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const TabOption = styled.p``;
+export const TabOption = styled.p`
+  text-align: center;
+  color: var(--Dark-blue);
+  letter-spacing: 0.01ch;
+  line-height: 2.5ch;
+  margin: 0;
+  transition: 0.2s;
+`;
 
 export const TabOptionBox = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
+  padding: 1.5rem 2.25rem;
+  transition: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+
+    ${TabOption} {
+      color: var(--Soft-red);
+    }
+  }
+
+  ${(props) =>
+    props.selected === true
+      ? css`
+          font-weight: 500;
+          border-bottom: 0.2rem solid var(--Soft-red);
+        `
+      : css`
+          font-weight: 400;
+          border-bottom: 0.1rem solid #d3d3d3;
+        `}
 `;
 
 export const TabBox = styled.div`
@@ -14,6 +42,8 @@ export const TabBox = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 70%;
+  user-select: none;
 `;
 
 const Tab = ({ className, options }) => {
