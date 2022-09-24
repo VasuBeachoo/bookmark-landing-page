@@ -5,13 +5,15 @@ import FeatureBlock from "../FeatureBlock";
 import imgFeature1 from "../../assets/illustration-features-tab-1.svg";
 import imgFeature2 from "../../assets/illustration-features-tab-2.svg";
 import imgFeature3 from "../../assets/illustration-features-tab-3.svg";
-import { mixinSection } from "../../GlobalStyle";
+import { mixinHeading, mixinParagraph, mixinSection } from "../../GlobalStyle";
 
 export const FeaturesParagraph = styled.p`
+  ${mixinParagraph}
   text-align: center;
 `;
 
 export const FeaturesHeading = styled.h2`
+  ${mixinHeading}
   text-align: center;
 `;
 

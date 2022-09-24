@@ -4,10 +4,16 @@ import ContactInput from "../ContactInput";
 
 export const CtaMainHeading = styled.h2`
   text-align: center;
+  color: var(--White);
+  font-weight: 400;
+  margin: 0;
 `;
 
 export const CtaSubHeading = styled.p`
   text-align: center;
+  color: var(--White);
+  font-weight: 500;
+  margin: 0;
 `;
 
 export const CtaBox = styled.section`
@@ -16,6 +22,7 @@ export const CtaBox = styled.section`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: var(--Soft-blue);
 `;
 
 const Cta = ({ className }) => {

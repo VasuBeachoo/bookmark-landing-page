@@ -14,7 +14,10 @@ export const FooterSocialIcons = styled.div`
   margin-left: auto;
 `;
 
-export const FooterLink = styled.p``;
+export const FooterLink = styled.p`
+  color: var(--White);
+  margin: 0;
+`;
 
 export const FooterLinks = styled.div`
   display: flex;
@@ -31,6 +34,7 @@ export const FooterBox = styled.footer`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  background-color: var(--Dark-blue);
 `;
 
 const Footer = ({ className }) => {

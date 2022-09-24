@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mixinSection } from "../../GlobalStyle";
+import { mixinHeading, mixinParagraph, mixinSection } from "../../GlobalStyle";
 import Accordion from "../Accordion";
 import Button from "../Buttons";
 
@@ -11,10 +11,12 @@ export const FaqItems = styled.div`
 `;
 
 export const FaqParagraph = styled.p`
+  ${mixinParagraph}
   text-align: center;
 `;
 
 export const FaqHeading = styled.h2`
+  ${mixinHeading}
   text-align: center;
 `;
 

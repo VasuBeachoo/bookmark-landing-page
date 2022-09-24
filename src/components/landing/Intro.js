@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Button from "../Buttons";
+import { SoftBlueBtn, DarkBlueBtn } from "../Buttons";
 import introImg from "../../assets/illustration-hero.svg";
-import { mixinSection } from "../../GlobalStyle";
+import { mixinHeading, mixinParagraph, mixinSection } from "../../GlobalStyle";
 
 export const IntroImg = styled.img``;
 
@@ -19,9 +19,13 @@ export const IntroBtns = styled.div`
   align-items: center;
 `;
 
-export const IntroParagraph = styled.p``;
+export const IntroParagraph = styled.p`
+  ${mixinParagraph}
+`;
 
-export const IntroHeading = styled.h1``;
+export const IntroHeading = styled.h1`
+  ${mixinHeading}
+`;
 
 export const IntroTextBox = styled.div`
   display: flex;
@@ -48,8 +52,8 @@ const Intro = ({ className }) => {
           a new browser tab and see your sites load instantly. Try it for free.
         </IntroParagraph>
         <IntroBtns>
-          <Button>Get it on Chrome</Button>
-          <Button>Get it on Firefox</Button>
+          <SoftBlueBtn>Get it on Chrome</SoftBlueBtn>
+          <DarkBlueBtn>Get it on Firefox</DarkBlueBtn>
         </IntroBtns>
       </IntroTextBox>
       <IntroImgBox>

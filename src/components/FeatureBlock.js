@@ -1,9 +1,14 @@
 import styled from "styled-components";
-import Button from "./Buttons";
+import { mixinHeading, mixinParagraph } from "../GlobalStyle";
+import { SoftBlueBtn } from "./Buttons";
 
-export const FeatureDescription = styled.p``;
+export const FeatureDescription = styled.p`
+  ${mixinParagraph}
+`;
 
-export const FeatureHeading = styled.h2``;
+export const FeatureHeading = styled.h2`
+  ${mixinHeading}
+`;
 
 export const FeatureTextBox = styled.div`
   display: flex;
@@ -37,7 +42,7 @@ const FeatureBlock = ({ className, img, heading, description }) => {
       <FeatureTextBox>
         <FeatureHeading>{heading}</FeatureHeading>
         <FeatureDescription>{description}</FeatureDescription>
-        <Button>More Info</Button>
+        <SoftBlueBtn>More Info</SoftBlueBtn>
       </FeatureTextBox>
     </FeatureBlockBox>
   );

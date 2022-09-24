@@ -1,13 +1,18 @@
 import styled from "styled-components";
-import Button from "./Buttons";
+import { mixinHeading, mixinParagraph } from "../GlobalStyle";
+import { SoftBlueBtn } from "./Buttons";
 
 export const DownloadDivider = styled.hr`
   width: 100%;
 `;
 
-export const DownloadInfo = styled.p``;
+export const DownloadInfo = styled.p`
+  ${mixinParagraph}
+`;
 
-export const DownloadTitle = styled.h3``;
+export const DownloadTitle = styled.h3`
+  ${mixinHeading}
+`;
 
 export const DownloadIcon = styled.img``;
 
@@ -26,7 +31,7 @@ const DownloadBlock = ({ className, icon, title, info }) => {
       <DownloadTitle>{title}</DownloadTitle>
       <DownloadInfo>{info}</DownloadInfo>
       <DownloadDivider />
-      <Button>Add & Install Extension</Button>
+      <SoftBlueBtn>Add & Install Extension</SoftBlueBtn>
     </DownloadBlockBox>
   );
 };

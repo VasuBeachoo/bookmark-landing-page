@@ -1,10 +1,14 @@
 import styled from "styled-components";
-import Button from "./Buttons";
+import { SoftRedBtn } from "./Buttons";
 import iconError from "../assets/icon-error.svg";
 
 export const ErrorIcon = styled.img``;
 
-export const ErrorMsg = styled.p``;
+export const ErrorMsg = styled.p`
+  color: var(--White);
+  font-style: italic;
+  margin: 0;
+`;
 
 export const ErrorMsgBox = styled.div`
   display: flex;
@@ -42,7 +46,7 @@ const ContactInput = ({ className }) => {
         </ErrorMsgBox>
         <ErrorIcon src={iconError} alt="error-icon" />
       </EmailInputBox>
-      <Button>Contact Us</Button>
+      <SoftRedBtn>Contact Us</SoftRedBtn>
     </ContactInputBox>
   );
 };

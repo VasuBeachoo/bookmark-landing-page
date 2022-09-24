@@ -3,7 +3,7 @@ import DownloadBlock from "../DownloadBlock";
 import logoChrome from "../../assets/logo-chrome.svg";
 import logoFirefox from "../../assets/logo-firefox.svg";
 import logoOpera from "../../assets/logo-opera.svg";
-import { mixinSection } from "../../GlobalStyle";
+import { mixinHeading, mixinParagraph, mixinSection } from "../../GlobalStyle";
 
 export const DownloadsOptions = styled.div`
   display: flex;
@@ -13,10 +13,12 @@ export const DownloadsOptions = styled.div`
 `;
 
 export const DownloadsParagraph = styled.p`
+  ${mixinParagraph}
   text-align: center;
 `;
 
 export const DownloadsHeading = styled.h2`
+  ${mixinHeading}
   text-align: center;
 `;
 

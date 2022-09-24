@@ -8,6 +8,7 @@ const GlobalStyle = styled.createGlobalStyle`
     --Soft-red: hsl(0, 94%, 66%);
     --Grayish-blue: hsl(229, 8%, 60%);
     --Dark-blue: hsl(229, 31%, 21%);
+    --White: hsl(0, 0%, 100%);
   }
 
   * {
@@ -22,6 +23,26 @@ const GlobalStyle = styled.createGlobalStyle`
 
 export const mixinSection = css`
   width: 100%;
+  padding-inline: clamp(2rem, 7vw, 5rem);
+`;
+
+export const mixinHeading = css`
+  color: var(--Dark-blue);
+  font-weight: 500;
+  margin: 0;
+`;
+
+export const mixinParagraph = css`
+  color: var(--Grayish-blue);
+  font-weight: 400;
+  margin: 0;
+`;
+
+export const mixinLink = css`
+  color: var(--Dark-blue);
+  font-weight: 400;
+  opacity: 0.8;
+  margin: 0;
 `;
 
 export default GlobalStyle;
