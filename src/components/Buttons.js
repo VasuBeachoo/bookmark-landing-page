@@ -8,7 +8,7 @@ const Button = styled.button`
   color: var(--White);
   font-size: 0.915rem;
   font-weight: 500;
-  letter-spacing: 0.2ch;
+  letter-spacing: 0.15ch;
   line-height: 2.15ch;
   border: 0.185rem solid var(--primary-clr);
   border-radius: 0.35rem;

@@ -5,7 +5,7 @@ import {
   mixinSection,
 } from "../../GlobalStyle";
 import Accordion from "../Accordion";
-import Button from "../Buttons";
+import { SoftBlueBtn } from "../Buttons";
 
 export const FaqItems = styled.div`
   display: flex;
@@ -70,7 +70,7 @@ const Faq = ({ className }) => {
         answered please feel free to email us.
       </FaqParagraph>
       <FaqItems>{displayFaqItems()}</FaqItems>
-      <Button>More Info</Button>
+      <SoftBlueBtn>More Info</SoftBlueBtn>
     </FaqBox>
   );
 };

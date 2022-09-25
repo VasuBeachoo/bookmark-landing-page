@@ -33,7 +33,7 @@ export const mixinSectionHeading = css`
   font-weight: 500;
   letter-spacing: 0.01ch;
   line-height: 2ch;
-  max-width: 20ch;
+  max-width: 25ch;
   margin: 0;
 `;
 

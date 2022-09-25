@@ -13,7 +13,9 @@ export const DownloadsOptions = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-top: 2rem;
 `;
 
 export const DownloadsParagraph = styled.p`
@@ -30,6 +32,8 @@ export const DownloadsBox = styled.section`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  gap: 1rem;
+  padding-block: 1rem 8rem;
 `;
 
 const Downloads = ({ className }) => {
@@ -69,6 +73,7 @@ const Downloads = ({ className }) => {
         icon={option.icon}
         title={option.title}
         info={option.info}
+        order={key - 2000}
       />
     ));
   };

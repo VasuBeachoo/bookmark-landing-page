@@ -19,10 +19,6 @@ export const TabOptionBox = styled.div`
 
   &:hover {
     cursor: pointer;
-
-    ${TabOption} {
-      color: var(--Soft-red);
-    }
   }
 
   ${(props) =>
@@ -34,6 +30,12 @@ export const TabOptionBox = styled.div`
       : css`
           font-weight: 400;
           border-bottom: 0.1rem solid #d3d3d3;
+
+          &:hover {
+            ${TabOption} {
+              color: var(--Soft-red);
+            }
+          }
         `}
 `;
 
