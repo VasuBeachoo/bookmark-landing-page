@@ -16,7 +16,6 @@ export const TabOptionBox = styled.div`
   justify-content: center;
   align-items: stretch;
   padding: 1.5rem 2.25rem;
-  transition: 0.2s;
 
   &:hover {
     cursor: pointer;
@@ -49,13 +48,19 @@ export const TabBox = styled.div`
   user-select: none;
 `;
 
-const Tab = ({ className, options }) => {
+const Tab = ({ className, options, selectedOptionId, selectOption }) => {
   const displayOptions = () => {
     let key = 12000;
 
     return options.map((option) => (
-      <TabOptionBox key={key++}>
-        <TabOption>{option}</TabOption>
+      <TabOptionBox
+        key={key++}
+        selected={option.id === selectedOptionId}
+        onClick={() => {
+          selectOption(option.id);
+        }}
+      >
+        <TabOption>{option.tabName}</TabOption>
       </TabOptionBox>
     ));
   };

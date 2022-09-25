@@ -76,7 +76,9 @@ const Features = ({ className }) => {
     },
   ];
 
-  const [currentFeature, setCurrentFeature] = useState(features[0]);
+  const [currentFeatureId, setCurrentFeatureId] = useState(0);
+
+  const currentFeature = features[currentFeatureId];
 
   return (
     <FeaturesBox className={className}>
@@ -87,7 +89,13 @@ const Features = ({ className }) => {
         them on the go.
       </FeaturesParagraph>
       <FeatureSwitcherBox>
-        <Tab options={features.map((feature) => feature.tabName)} />
+        <Tab
+          options={features.map((feature) => {
+            return { id: feature.id, tabName: feature.tabName };
+          })}
+          selectedOptionId={currentFeatureId}
+          selectOption={setCurrentFeatureId}
+        />
         <FeatureBlock
           img={currentFeature.img}
           heading={currentFeature.heading}
