@@ -33,7 +33,7 @@ export const DownloadsBox = styled.section`
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
-  padding-block: 1rem 8rem;
+  padding-block: 1rem 7.5rem;
 `;
 
 const Downloads = ({ className }) => {

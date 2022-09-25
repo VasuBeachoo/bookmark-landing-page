@@ -12,10 +12,13 @@ export const FaqItems = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
+  border-bottom: 0.1rem solid #d3d3d3;
 `;
 
 export const FaqParagraph = styled.p`
   ${mixinSectionParagraph}
+  margin-top: -1.5rem;
 `;
 
 export const FaqHeading = styled.h2`
@@ -28,28 +31,30 @@ export const FaqBox = styled.section`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  gap: 2.5rem;
+  padding-block: 0 6rem;
 `;
 
 const Faq = ({ className }) => {
   const faqItems = [
     {
       heading: "What is Bookmark?",
-      dropdown:
+      dropdownText:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.",
     },
     {
       heading: "How can I request a new browser?",
-      dropdown:
+      dropdownText:
         "Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.",
     },
     {
       heading: "Is there a mobile app?",
-      dropdown:
+      dropdownText:
         "Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.",
     },
     {
       heading: "What about other Chromium browsers?",
-      dropdown:
+      dropdownText:
         "Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.",
     },
   ];
@@ -58,7 +63,11 @@ const Faq = ({ className }) => {
     let key = 3000;
 
     return faqItems.map((item) => (
-      <Accordion key={key++} heading={item.heading} dropdown={item.dropdown} />
+      <Accordion
+        key={key++}
+        heading={item.heading}
+        dropdownText={item.dropdownText}
+      />
     ));
   };
 
