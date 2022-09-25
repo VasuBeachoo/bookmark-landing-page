@@ -32,10 +32,14 @@ export const EmailInput = styled.input.attrs({ type: "email" })`
   width: 100%;
   border: none;
   border-radius: 0.5rem;
-  padding: 1rem 3.25rem 1rem 1rem;
+  padding: 1.05rem 3.25rem 1.05rem 1rem;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
 
   &:focus {
-    outline: 0.15rem solid var(--Dark-blue);
+    outline: 0.1rem solid var(--Dark-blue);
   }
 `;
 
@@ -54,8 +58,9 @@ export const ContactInputBox = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 70%;
-  gap: 1rem;
+  width: 80%;
+  max-width: 32rem;
+  gap: 0.75rem;
 `;
 
 const ContactInput = ({ className }) => {
@@ -75,7 +80,11 @@ const ContactInput = ({ className }) => {
   return (
     <ContactInputBox className={className}>
       <EmailInputBox>
-        <EmailInput value={input} onChange={(e) => setInput(e.target.value)} />
+        <EmailInput
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Enter your email address..."
+        />
         {errorDisplay && (
           <>
             <ErrorMsgBox>

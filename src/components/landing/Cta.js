@@ -25,7 +25,7 @@ export const CtaBox = styled.section`
   align-items: center;
   gap: 1.5rem;
   background-color: var(--Soft-blue);
-  padding-block: 3rem;
+  padding-block: 3.5rem;
 `;
 
 const Cta = ({ className }) => {

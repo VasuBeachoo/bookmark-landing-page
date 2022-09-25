@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 export const TabOption = styled.p`
   text-align: center;
   color: var(--Dark-blue);
+  font-size: 1.05rem;
   letter-spacing: 0.01ch;
   line-height: 2.5ch;
   margin: 0;
