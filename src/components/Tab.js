@@ -37,6 +37,10 @@ export const TabOptionBox = styled.div`
             }
           }
         `}
+
+  @media (max-width: 1000px) {
+    width: 17.5rem;
+  }
 `;
 
 export const TabBox = styled.div`
@@ -46,6 +50,11 @@ export const TabBox = styled.div`
   align-items: center;
   width: 70%;
   user-select: none;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const Tab = ({ className, options, selectedOptionId, selectOption }) => {

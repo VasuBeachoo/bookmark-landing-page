@@ -31,7 +31,7 @@ export const EmailInput = styled.input.attrs({ type: "email" })`
   color: var(--Dark-blue);
   width: 100%;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   padding: 1.05rem 3.25rem 1.05rem 1rem;
 
   &::placeholder {
@@ -61,6 +61,13 @@ export const ContactInputBox = styled.div`
   width: 80%;
   max-width: 32rem;
   gap: 0.75rem;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+  }
 `;
 
 const ContactInput = ({ className }) => {

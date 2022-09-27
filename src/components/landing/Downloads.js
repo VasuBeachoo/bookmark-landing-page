@@ -16,6 +16,13 @@ export const DownloadsOptions = styled.div`
   align-items: flex-start;
   gap: 2rem;
   padding-top: 2rem;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+  }
 `;
 
 export const DownloadsParagraph = styled.p`

@@ -8,7 +8,12 @@ import {
 } from "../../GlobalStyle";
 
 export const IntroImg = styled.img`
-  width: 100%;
+  width: clamp(10rem, 100%, 40rem);
+  transform: translate(-5rem, -3rem);
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 export const IntroImgBox = styled.div`
@@ -16,6 +21,13 @@ export const IntroImgBox = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: var(--Soft-blue);
+  border-radius: 50% 0 0 50%;
+  margin: 0 -15rem 0 0;
+
+  @media (max-width: 1000px) {
+    width: 90%;
+  }
 `;
 
 export const IntroBtns = styled.div`
@@ -24,17 +36,29 @@ export const IntroBtns = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 export const IntroParagraph = styled.p`
   ${mixinSectionParagraph}
   text-align: left;
+
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 
 export const IntroHeading = styled.h1`
   ${mixinSectionHeading}
   text-align: left;
   font-size: 2.25rem;
+
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 
 export const IntroTextBox = styled.div`
@@ -44,6 +68,10 @@ export const IntroTextBox = styled.div`
   align-items: flex-start;
   flex-shrink: 0.25;
   gap: 1.5rem;
+
+  @media (max-width: 1000px) {
+    align-items: center;
+  }
 `;
 
 export const IntroBox = styled.section`
@@ -52,8 +80,12 @@ export const IntroBox = styled.section`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
-  padding-block: 1.5rem 6rem;
+  gap: 4rem;
+  padding-block: 2.5rem 6rem;
+
+  @media (max-width: 1000px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const Intro = ({ className }) => {

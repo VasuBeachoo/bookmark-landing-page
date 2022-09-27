@@ -16,9 +16,14 @@ export const FeatureSwitcherBox = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 4.25rem;
+  gap: 10rem;
   width: 100%;
   padding-top: 2rem;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    padding-top: 1rem;
+  }
 `;
 
 export const FeaturesParagraph = styled.p`

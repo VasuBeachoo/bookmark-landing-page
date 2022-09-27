@@ -21,6 +21,10 @@ export const FooterSocialIcons = styled.div`
   align-items: center;
   gap: 2rem;
   margin-left: auto;
+
+  @media (max-width: 1000px) {
+    margin-left: 0;
+  }
 `;
 
 export const FooterLink = styled.p`
@@ -42,6 +46,10 @@ export const FooterLinks = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 export const FooterLogo = styled.img`
@@ -57,6 +65,12 @@ export const FooterBox = styled.footer`
   gap: 5rem;
   background-color: var(--Dark-blue);
   padding-block: 1.75rem;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-block: 2.5rem;
+  }
 `;
 
 const Footer = ({ className }) => {

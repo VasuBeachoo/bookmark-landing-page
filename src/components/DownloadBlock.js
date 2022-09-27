@@ -36,6 +36,12 @@ export const DownloadBlockBox = styled.div`
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   padding: 1.5rem;
   margin-top: ${(props) => props.order};
+
+  @media (max-width: 1000px) {
+    width: clamp(10rem, 80%, 25rem);
+    padding: 2rem;
+    margin-top: 0;
+  }
 `;
 
 const DownloadBlock = ({ className, icon, title, info, order }) => {
