@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/bookmark-landing-page/static/js/main.37113a91.js",
+    "main.js": "/bookmark-landing-page/static/js/main.eb5679af.js",
     "static/media/illustration-features-tab-3.svg": "/bookmark-landing-page/static/media/illustration-features-tab-3.a4206aab7946773b29b702492d2d014b.svg",
     "static/media/illustration-features-tab-2.svg": "/bookmark-landing-page/static/media/illustration-features-tab-2.e933bd6d921c537d7743e08ea4ec488e.svg",
     "static/media/illustration-hero.svg": "/bookmark-landing-page/static/media/illustration-hero.07801d05cb11930f0c826add8c05ce22.svg",
@@ -16,9 +16,9 @@
     "static/media/icon-close.svg": "/bookmark-landing-page/static/media/icon-close.b04dc29397de9c9f194fb075c140e966.svg",
     "static/media/icon-hamburger.svg": "/bookmark-landing-page/static/media/icon-hamburger.4385fd507d24f37ccbb3ae359b5c9555.svg",
     "static/media/icon-arrow.svg": "/bookmark-landing-page/static/media/icon-arrow.8174203a5d4fc44f5247b825de6e2158.svg",
-    "main.37113a91.js.map": "/bookmark-landing-page/static/js/main.37113a91.js.map"
+    "main.eb5679af.js.map": "/bookmark-landing-page/static/js/main.eb5679af.js.map"
   },
   "entrypoints": [
-    "static/js/main.37113a91.js"
+    "static/js/main.eb5679af.js"
   ]
 }
