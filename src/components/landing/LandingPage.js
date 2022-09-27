@@ -15,10 +15,14 @@ export const LandingPageBox = styled.div`
   width: 100%;
 `;
 
-const LandingPage = ({ className }) => {
+const LandingPage = ({ className, navLinks, menuOpen, setMenuOpen }) => {
   return (
     <LandingPageBox className={className}>
-      <Header />
+      <Header
+        headerLinks={navLinks}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
       <Intro />
       <Features />
       <Downloads />

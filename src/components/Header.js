@@ -1,7 +1,22 @@
 import styled from "styled-components";
 import { SoftRedBtn } from "./Buttons";
 import logoBookmark from "../assets/logo-bookmark.svg";
+import iconMenuOpen from "../assets/icon-hamburger.svg";
+import iconMenuClose from "../assets/icon-close.svg";
 import { mixinLink, mixinSection } from "../GlobalStyle";
+
+export const MenuIcon = styled.img`
+  display: none;
+  z-index: 3;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+`;
 
 export const HeaderLink = styled.p`
   ${mixinLink}
@@ -15,7 +30,10 @@ export const HeaderLinks = styled.nav`
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-left: auto;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 export const HeaderLogo = styled.img``;
@@ -24,15 +42,13 @@ export const HeaderBox = styled.header`
   ${mixinSection}
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   gap: 2rem;
   padding-block: 3rem;
 `;
 
-const Header = ({ className }) => {
-  const headerLinks = ["FEATURES", "PRICING", "CONTACT"];
-
+const Header = ({ className, headerLinks, menuOpen, setMenuOpen }) => {
   const displayHeaderLinks = () => {
     let key = 1000;
 
@@ -48,6 +64,11 @@ const Header = ({ className }) => {
         {displayHeaderLinks()}
         <SoftRedBtn>LOGIN</SoftRedBtn>
       </HeaderLinks>
+      <MenuIcon
+        src={menuOpen ? iconMenuClose : iconMenuOpen}
+        alt={menuOpen ? "close-menu-icon" : "open-menu-icon"}
+        onClick={() => setMenuOpen(!menuOpen)}
+      />
     </HeaderBox>
   );
 };
