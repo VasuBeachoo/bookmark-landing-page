@@ -47,7 +47,7 @@ export const FeaturesBox = styled.section`
 const Features = ({ className }) => {
   const features = [
     {
-      id: "0",
+      id: 0,
       tabName: "Simple Bookmarking",
       img: {
         src: imgFeature1,
@@ -58,7 +58,7 @@ const Features = ({ className }) => {
         "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.",
     },
     {
-      id: "1",
+      id: 1,
       tabName: "Speedy Searching",
       img: {
         src: imgFeature2,
@@ -69,7 +69,7 @@ const Features = ({ className }) => {
         "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
     },
     {
-      id: "2",
+      id: 2,
       tabName: "Easy Sharing",
       img: {
         src: imgFeature3,
