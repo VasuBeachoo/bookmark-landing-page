@@ -44,6 +44,7 @@ export const FeatureImgBox = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 50%;
   background-color: var(--Soft-blue);
   border-radius: 0 50% 50% 0;
   margin: 0 0 0 -15rem;

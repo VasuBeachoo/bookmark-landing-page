@@ -78,7 +78,7 @@ export const IntroBox = styled.section`
   ${mixinSection}
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 4rem;
   padding-block: 2.5rem 6rem;
